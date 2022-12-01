@@ -1,0 +1,1 @@
+get-wmiobject Win32_Product | Where Name -like ("WSS Agent") | Format-Table IdentifyingNumber, Name, Version, LocalPackage -AutoSize
