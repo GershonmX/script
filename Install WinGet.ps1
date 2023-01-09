@@ -1,3 +1,4 @@
+#$cred = Get-Credential
 #Invoke-Command -FilePath "\\SERVER\Install WinGet.ps1" -ComputerName LTXX-XXX
 
 #Install WinGet
