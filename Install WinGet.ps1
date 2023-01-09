@@ -1,4 +1,5 @@
 ﻿#Install WinGet
+    #https://chris-ayers.com/2021/08/01/scripting-winget/
     #Based on this gist: https://gist.github.com/crutkas/6c2096eae387e544bd05cde246f23901
     $hasPackageManager = Get-AppPackage -name 'Microsoft.DesktopAppInstaller'
     if (!$hasPackageManager -or [version]$hasPackageManager.Version -lt [version]"1.10.0.0") {
