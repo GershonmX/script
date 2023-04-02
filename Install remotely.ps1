@@ -2,7 +2,7 @@
 #https://www.youtube.com/watch?v=QT4u74JWbOM
 
 $Servers = Get-Content "C:\script\pcname.csv"
-$Folder= "\\192.168.255.71\$ins\acrobat.exe" , "\\192.168.255.71\$ins\7zip.msi"
+$Folder= "\\<server.ip>\$ins\acrobat.exe" , "\\<server.ip>\$ins\7zip.msi"
 
 foreach ($Server in $Servers){
 $Test = Test-path -path "\\$Server\C$\Temp\"
