@@ -2,7 +2,7 @@
 #https://stackoverflow.com/questions/6587426/powershell-remoting-with-ip-address-as-target
 
 Set-Item WSMan:\localhost\Client\TrustedHosts -Value "*" -Force
-Enter-PSSession -Computername 192.168.1.1 -credentials $cred 
+Enter-PSSession -Computername 192.168.X.X -credentials $cred 
 
 
 #winrs: winrs -r:PCNAME cmd
