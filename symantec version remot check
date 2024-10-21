@@ -1,0 +1,20 @@
+# List of computer names (replace these with your actual computer names)
+$computerNames = @("LT55-0188")
+
+# Loop through each computer name
+foreach ($computerName in $computerNames) {
+    # Establish a PowerShell remoting session to the remote computer
+    $session = New-PSSession -ComputerName $computerName
+
+    # Execute the scriptblock on the remote computer
+    Invoke-Command -Session $session -ScriptBlock {
+        # Get the list of installed products from Win32_Product
+        $installedProducts = Get-WmiObject -Class Win32_Product | Where-Object { $_.Vendor -eq "Symantec Corp." }
+
+        # Output the results
+        $installedProducts
+    }
+
+    # Close the session
+    Remove-PSSession $session
+}
